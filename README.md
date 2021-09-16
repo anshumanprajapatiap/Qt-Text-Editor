@@ -22,4 +22,12 @@ Compiled and Tested on Windows Windows 10. with Qt 5
 - $ make
 - $ Nodepad
 
+#Issues/challenges
+ - Features are only calling once.
 
+#Features
+- Bold/Unbold
+- Subscript/SuperScript
+- Font Size
+- Font type
+- Italic
