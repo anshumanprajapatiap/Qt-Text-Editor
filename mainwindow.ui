@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>878</width>
-    <height>488</height>
+    <width>1031</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
+      <y>-20</y>
       <width>861</width>
       <height>441</height>
      </rect>
@@ -30,8 +30,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>878</width>
-     <height>22</height>
+     <width>1031</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFIle">
@@ -59,16 +59,22 @@
     <property name="title">
      <string>Text Formatting</string>
     </property>
+    <addaction name="actionFont"/>
     <addaction name="actionBold"/>
     <addaction name="actionItalic"/>
     <addaction name="separator"/>
-    <addaction name="actionFonts"/>
+    <addaction name="actionFontsinc"/>
+    <addaction name="separator"/>
+    <addaction name="actionFontsdec"/>
+    <addaction name="actionsubscript"/>
+    <addaction name="actionsuperscript"/>
    </widget>
    <widget class="QMenu" name="menuAbout_me">
     <property name="title">
      <string>About me</string>
     </property>
     <addaction name="actionResume"/>
+    <addaction name="actionResume_pdf"/>
    </widget>
    <addaction name="menuFIle"/>
    <addaction name="menuEdit"/>
@@ -94,12 +100,17 @@
    <addaction name="separator"/>
    <addaction name="actionBold"/>
    <addaction name="actionItalic"/>
+   <addaction name="actionFontsinc"/>
+   <addaction name="actionFontsdec"/>
+   <addaction name="actionsubscript"/>
+   <addaction name="actionsuperscript"/>
+   <addaction name="actionFont"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew_FIle">
    <property name="icon">
-    <iconset>
-     <normaloff>new.png</normaloff>new.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/new.png</normaloff>:/Images/new.png</iconset>
    </property>
    <property name="text">
     <string>New FIle</string>
@@ -107,8 +118,8 @@
   </action>
   <action name="actionOpen_File">
    <property name="icon">
-    <iconset>
-     <normaloff>open.png</normaloff>open.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/open.png</normaloff>:/Images/open.png</iconset>
    </property>
    <property name="text">
     <string>Open File</string>
@@ -116,8 +127,8 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset>
-     <normaloff>save.png</normaloff>save.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/save.png</normaloff>:/Images/save.png</iconset>
    </property>
    <property name="text">
     <string>Save</string>
@@ -125,8 +136,8 @@
   </action>
   <action name="actionSave_as">
    <property name="icon">
-    <iconset>
-     <normaloff>saveas.png</normaloff>saveas.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/saveas.png</normaloff>:/Images/saveas.png</iconset>
    </property>
    <property name="text">
     <string>Save as</string>
@@ -134,8 +145,8 @@
   </action>
   <action name="actionCopy">
    <property name="icon">
-    <iconset>
-     <normaloff>copy.png</normaloff>copy.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/copy.png</normaloff>:/Images/copy.png</iconset>
    </property>
    <property name="text">
     <string>Copy</string>
@@ -143,8 +154,8 @@
   </action>
   <action name="actionCut">
    <property name="icon">
-    <iconset>
-     <normaloff>cut.png</normaloff>cut.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/cut.png</normaloff>:/Images/cut.png</iconset>
    </property>
    <property name="text">
     <string>Cut</string>
@@ -152,8 +163,8 @@
   </action>
   <action name="actionUndo">
    <property name="icon">
-    <iconset>
-     <normaloff>undo.png</normaloff>undo.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/undo.png</normaloff>:/Images/undo.png</iconset>
    </property>
    <property name="text">
     <string>Undo</string>
@@ -161,8 +172,8 @@
   </action>
   <action name="actionRedo">
    <property name="icon">
-    <iconset>
-     <normaloff>redo.png</normaloff>redo.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/redo.png</normaloff>:/Images/redo.png</iconset>
    </property>
    <property name="text">
     <string>Redo</string>
@@ -170,8 +181,8 @@
   </action>
   <action name="actionPaste">
    <property name="icon">
-    <iconset>
-     <normaloff>paste.png</normaloff>paste.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/paste.png</normaloff>:/Images/paste.png</iconset>
    </property>
    <property name="text">
     <string>Paste</string>
@@ -185,8 +196,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>bold.png</normaloff>bold.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/bold.png</normaloff>:/Images/bold.png</iconset>
    </property>
    <property name="text">
     <string>Bold</string>
@@ -197,25 +208,86 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>italic.png</normaloff>italic.png</iconset>
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/italic.png</normaloff>:/Images/italic.png</iconset>
    </property>
    <property name="text">
     <string>Italic</string>
    </property>
   </action>
-  <action name="actionFonts">
+  <action name="actionFontsinc">
+   <property name="icon">
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/fontinc.png</normaloff>:/Images/fontinc.png</iconset>
+   </property>
    <property name="text">
-    <string>Fonts</string>
+    <string> Font Size +</string>
    </property>
   </action>
   <action name="actionResume">
+   <property name="icon">
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/new.png</normaloff>:/Images/new.png</iconset>
+   </property>
    <property name="text">
     <string>Resume</string>
    </property>
   </action>
+  <action name="actionsubscript">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/subscript.png</normaloff>:/Images/subscript.png</iconset>
+   </property>
+   <property name="text">
+    <string>subscript</string>
+   </property>
+  </action>
+  <action name="actionsuperscript">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/superscript.png</normaloff>:/Images/superscript.png</iconset>
+   </property>
+   <property name="text">
+    <string>superscript</string>
+   </property>
+  </action>
+  <action name="actionFontsdec">
+   <property name="icon">
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/fontdec.png</normaloff>:/Images/fontdec.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font Size -</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset resource="appresources.qrc">
+     <normaloff>:/Images/fonttype.png</normaloff>:/Images/fonttype.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Font</string>
+   </property>
+  </action>
+  <action name="actionResume_pdf">
+   <property name="icon">
+    <iconset>
+     <normaloff>new.png</normaloff>new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Resume pdf</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="appresources.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -12,5 +12,10 @@
         <file>undo.png</file>
         <file>bold.png</file>
         <file>italic.png</file>
+        <file>fontdec.png</file>
+        <file>fontinc.png</file>
+        <file>fonttype.png</file>
+        <file>subscript.png</file>
+        <file>superscript.png</file>
     </qresource>
 </RCC>

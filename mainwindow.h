@@ -41,6 +41,20 @@ private slots:
 
     void on_actionItalic_triggered(bool checked);
 
+    void on_actionResume_triggered();
+
+    void on_actionsuperscript_triggered(bool checked);
+
+    void on_actionsubscript_triggered(bool checked);
+
+    void selectFont();
+
+    void on_actionFontsinc_triggered();
+
+    void on_actionFontsdec_triggered();
+
+    void on_actionResume_pdf_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString mFilename;
